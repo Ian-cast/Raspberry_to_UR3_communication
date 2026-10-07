@@ -1,0 +1,50 @@
+# =========================
+# Python
+# =========================
+
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment variables / secrets
+.env
+.env.*
+
+# =========================
+# IDEs / Editors
+# =========================
+
+.vscode/
+.idea/
+
+# =========================
+# OS files
+# =========================
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# =========================
+# Logs
+# =========================
+
+*.log
+
+# =========================
+# Testing / Coverage
+# =========================
+
+.pytest_cache/
+.coverage
+htmlcov/

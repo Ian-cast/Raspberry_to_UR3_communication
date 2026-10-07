@@ -1,0 +1,15 @@
+socket_open("192.168.6.51", 5000)
+
+socket_send_string("Hola")
+
+while True:
+    message = socket_read_string()
+
+    if message == "q":
+        break
+    end
+
+    sleep(0.1)
+end
+
+socket_close()
