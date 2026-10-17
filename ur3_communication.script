@@ -1,15 +1,26 @@
-socket_open("192.168.6.51", 5000)
+HOST = "192.168.6.51"
+PORT = 5000
 
-socket_send_string("Hola")
+connected = socket_open(HOST, PORT, "pc")
+
+while connected == False:
+    textmsg("Sin conexion con el PC, reintentando...")
+    sleep(1.0)
+    connected = socket_open(HOST, PORT, "pc")
+end
+
+textmsg("Conectado al PC")
+socket_send_string("Hola", "pc")
 
 while True:
-    message = socket_read_string()
+    message = socket_read_string("pc")
 
     if message == "q":
+        textmsg("Recibido q, continuando")
         break
     end
 
     sleep(0.1)
 end
 
-socket_close()
+socket_close("pc")
